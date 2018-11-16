@@ -1,0 +1,108 @@
+/*shared global style*/
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  font-family:arial,sans-serif;
+  font-size:100%;
+  margin:3em;
+  background-image: url("background.jpg");
+}
+textarea {
+    resize: none;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* . is a class */
+.sticky{
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+  position:absolute;
+  width:200px; 
+  min-height:200px; /*if no height, the sticky will grow with the text*/
+  padding:5px;
+  background-color:lightyellow;
+  border:1px solid black;
+  cursor:move; /*mouseover cursor indicates the sticky can be moved */
+  word-wrap: break-word; /*prevent long words without spaces to escape div*/
+  /* Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -moz-transition:-moz-transform .15s linear;
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -webkit-transition:-webkit-transform .15s linear;
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -o-transition:-o-transform .15s linear;
+  
+}
+/*every n sticky notes is tilted off a bit from each other*/
+.sticky:nth-child(even){
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  top:5px;
+  background:#cfc;
+}
+.sticky:nth-child(3n){
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  top:-5px;
+  background:#ccf;
+}
+.sticky:nth-child(5n){
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  top:-10px;
+}
+.sticky:hover{
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  z-index:99;
+}
+.xButton{
+  background-color:Transparent;
+    background-repeat:no-repeat;
+    border:none;
+    cursor:pointer;
+    text-align: right;
+    overflow:hidden;
+    outline:none;
+    float:right;
+    display:inline-block;
+
+}
+ .topCorner{
+   position:absolute;
+   top:0;
+   right:0;
+   width: 90px;
+   height: 40px;
+ }
+
+ #container{
+  min-height:100%;
+ }
+
+ #submitBtn{
+  margin-top: 10px;
+ }
+
+ #logoutBtn{
+  margin-top: 5px;
+  margin-right: 5px;
+ }
